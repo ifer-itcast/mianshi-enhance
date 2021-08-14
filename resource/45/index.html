@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            display: flex;
+        }
+
+        .container div {
+            height: 100px;
+            /* flex: 1; */
+            flex: 1 1 0;
+        }
+
+        .container div:nth-child(1) {
+            background-color: red;
+        }
+
+        .container div:nth-child(2) {
+            background-color: green;
+        }
+
+        .container div:nth-child(3) {
+            background-color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div>1</div>
+        <div>222222222</div>
+        <div>33333333333333333333</div>
+    </div>
+</body>
+
+</html>
