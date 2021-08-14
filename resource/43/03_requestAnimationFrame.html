@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            line-height: 30px;
+            background-color: red;
+            width: 0;
+            text-align: center;
+            color: #fff;
+            visibility: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="oDiv" class="box"></div>
+    <button id="oBtn">进度</button>
+    <script>
+        let timer = null;
+        const TARGET = 400;
+        const STEP = 3;
+        oBtn.onclick = function () {
+            cancelAnimationFrame(timer);
+            oDiv.style.width = 0;
+            timer = requestAnimationFrame(function fn() {
+                if (oDiv.offsetWidth >= TARGET) {
+                    clearTimeout(timer);
+                    oDiv.style.width = TARGET + 'px';
+                } else {
+                    oDiv.style.width = oDiv.offsetWidth + STEP + 'px';
+                    oDiv.innerHTML = parseInt((oDiv.offsetWidth / TARGET) * 100) + '%';
+                    timer = requestAnimationFrame(fn, 16);
+                }
+            }, 16);
+        };
+    </script>
+</body>
+
+</html>

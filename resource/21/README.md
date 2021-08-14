@@ -1,0 +1,1 @@
+把所有 GET 请求都转发到 /index.html，然后由 vue-router 来接管页面路由的处理
