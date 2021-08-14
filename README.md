@@ -88,5 +88,9 @@
 
 ## 44. [重绘和回流](./resource/44/README.md)
 
-## 45. [flex: 1;](./resource/45/README.md)
+## 45. [flex 是哪几个属性的简写](./resource/45/README.md)
+
+## 46. [Vue Router 钩子](./resource/46/README.md)
+
+
 
